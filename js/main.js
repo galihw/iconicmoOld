@@ -52,9 +52,14 @@ document.querySelectorAll('.btnDetail').forEach(item => {
         document.querySelector('.modalDeskripsi').innerHTML = deskripsi;
         document.querySelector('.modalHarga').innerHTML = harga;
 
-        const nohp = '6285714408830';
+        //const nohp = '6285714408830';
+        //let pesan = `https://api.whatsapp.com/send?phone=${nohp}&text=Halo Bang, saya mau pesan produk ini ${judul}`;
+        //document.querySelector('.btnBeli').href = pesan;
+		const nohp = '6285714408830';
         let pesan = `https://api.whatsapp.com/send?phone=${nohp}&text=Halo Bang, saya mau pesan produk ini ${judul}`;
-        document.querySelector('.btnBeli').href = pesan;
+        document.getElementById("buttonBeli").addEventListener('click', (e) => {
+			window.location.href = pesan;
+		})
 		
         //document.querySelector('.btnBeli').addEventListener('click', () => {
 		//  pay(parseInt(harga),judul);
